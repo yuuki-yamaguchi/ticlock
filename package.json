@@ -1,9 +1,8 @@
 {
   "name": "ticlock",
   "productName": "ticlock",
-  "version": "1.0.0",
-  "description": "My Electron application description",
   "main": "src/index.js",
+  "version":"0.0.0",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -12,8 +11,7 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": "yuuki-dev",
-  "license": "MIT",
+  "author": "yuuki yamaguchi (https://github.com/Yuuki-Yamaguchi)",
   "config": {
     "forge": {
       "packagerConfig": {},
