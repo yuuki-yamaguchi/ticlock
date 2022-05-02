@@ -5,3 +5,11 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.material-icons.ticlock-function-icons{
+  font-size: 100px;
+}
+
+.material-icons-outlined.ticlock-function-icons{
+  font-size: 100px;
+}
