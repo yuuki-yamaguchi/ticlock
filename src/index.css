@@ -8,8 +8,10 @@ body {
 
 .material-icons.ticlock-function-icons{
   font-size: 100px;
+  cursor: pointer;
 }
 
 .material-icons-outlined.ticlock-function-icons{
   font-size: 100px;
+  cursor: pointer;
 }

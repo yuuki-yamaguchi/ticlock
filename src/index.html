@@ -8,14 +8,30 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
   </head>
   <body>
-    <span class="material-icons ticlock-function-icons" id="clock">
+    <span class="material-icons ticlock-function-icons" id="clock-icon">
       schedule
     </span>
-    <span class="material-icons ticlock-function-icons" id="timer">
+    <span class="material-icons ticlock-function-icons" id="timer-icon">
       av_timer
     </span>
-    <span class="material-icons-outlined ticlock-function-icons" id="stopwatch">
+    <span class="material-icons-outlined ticlock-function-icons" id="stopwatch-icon">
       timer
     </span>
   </body>
+
+  <script>
+    let clockIcon = document.getElementById('clock-icon');
+    let timerIcon = document.getElementById('timer-icon');
+    let stopwatchIcon = document.getElementById('stopwatch-icon');
+
+    clockIcon.addEventListener('click', ()=>{
+      console.log('clockIcon is clicked.');
+    });
+    timerIcon.addEventListener('click', ()=>{
+      console.log('timerIcon is clicked.');
+    });
+    stopwatchIcon.addEventListener('click', ()=>{
+      console.log('stopwatchIcon is clicked.');
+    });
+  </script>
 </html>
