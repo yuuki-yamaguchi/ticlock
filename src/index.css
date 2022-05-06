@@ -9,13 +9,20 @@ body {
 .material-icons.ticlock-function-icons{
   font-size: 100px;
   cursor: pointer;
+  margin: auto 10px;
 }
 
 .material-icons-outlined.ticlock-function-icons{
   font-size: 100px;
   cursor: pointer;
+  margin: auto 10px;
+}
+
+#ticlock-function-icons-wrapper{
+  text-align: center;
 }
 
 #clock-time{
   font-size: 150px;
+  text-align: center;
 }
