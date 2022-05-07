@@ -5,3 +5,41 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.material-icons.ticlock-function-icons{
+  font-size: 100px;
+  cursor: pointer;
+  margin: auto 10px;
+}
+
+.ticlock-function-icons{
+  opacity: 0.5;
+}
+
+.ticlock-function-icons:hover{
+  opacity: 1.0;
+}
+
+.function-in-use-icon{
+  opacity: 1.0;
+}
+
+.material-icons-outlined.ticlock-function-icons{
+  font-size: 100px;
+  cursor: pointer;
+  margin: auto 10px;
+}
+
+#function-in-use{
+  font-size: 20px;
+  text-align: center;
+}
+
+#ticlock-function-icons-wrapper{
+  text-align: center;
+}
+
+#clock-time{
+  font-size: 150px;
+  text-align: center;
+}
