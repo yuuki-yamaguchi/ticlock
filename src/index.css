@@ -30,6 +30,11 @@ body {
   margin: auto 10px;
 }
 
+#function-in-use{
+  font-size: 20px;
+  text-align: center;
+}
+
 #ticlock-function-icons-wrapper{
   text-align: center;
 }

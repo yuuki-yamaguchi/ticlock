@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
   </head>
   <body>
+
+    <div id="function-in-use"></div>
+
     <div id="clock-time">10:10</div>
 
     <div id="ticlock-function-icons-wrapper">
@@ -27,22 +30,33 @@
     let clockIcon = document.getElementById('clock-icon');
     let timerIcon = document.getElementById('timer-icon');
     let stopwatchIcon = document.getElementById('stopwatch-icon');
+    let functionInUseText = document.getElementById('function-in-use');
 
-    let functionInUse = 'clock';
+    let functionInUse = 'Clock';
     let functionInUseIcon = clockIcon;
 
-    clockIcon.addEventListener('click', ()=>{
-      change_function_in_use_icon(functionInUseIcon, clockIcon);
-      functionInUse = 'clock';
-    });
-    timerIcon.addEventListener('click', ()=>{
-      change_function_in_use_icon(functionInUseIcon, timerIcon);
-      functionInUse = 'timer';
-    });
-    stopwatchIcon.addEventListener('click', ()=>{
-      change_function_in_use_icon(functionInUseIcon, stopwatchIcon);
-      functionInUse = 'stopWatch';
-    });
+    init();
+
+    function init(){
+      functionInUseText.innerText = functionInUse;
+      functionInUseIcon.classList.add('function-in-use-icon');
+
+      clockIcon.addEventListener('click', ()=>{
+        change_function_in_use_icon(functionInUseIcon, clockIcon);
+        functionInUse = 'Clock';
+        functionInUseText.innerText = functionInUse;
+      });
+      timerIcon.addEventListener('click', ()=>{
+        change_function_in_use_icon(functionInUseIcon, timerIcon);
+        functionInUse = 'Timer';
+        functionInUseText.innerText = functionInUse;
+      });
+      stopwatchIcon.addEventListener('click', ()=>{
+        change_function_in_use_icon(functionInUseIcon, stopwatchIcon);
+        functionInUse = 'Stop Watch';
+        functionInUseText.innerText = functionInUse;
+      });      
+    }
 
     function change_function_in_use_icon(previous_active_function_icon, new_active_function_icon){
       previous_active_function_icon.classList.remove('function-in-use-icon');
