@@ -12,6 +12,18 @@ body {
   margin: auto 10px;
 }
 
+.ticlock-function-icons{
+  opacity: 0.5;
+}
+
+.ticlock-function-icons:hover{
+  opacity: 1.0;
+}
+
+.function-in-use-icon{
+  opacity: 1.0;
+}
+
 .material-icons-outlined.ticlock-function-icons{
   font-size: 100px;
   cursor: pointer;

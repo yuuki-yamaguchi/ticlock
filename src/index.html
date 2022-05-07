@@ -28,14 +28,27 @@
     let timerIcon = document.getElementById('timer-icon');
     let stopwatchIcon = document.getElementById('stopwatch-icon');
 
+    let functionInUse = 'clock';
+    let functionInUseIcon = clockIcon;
+
     clockIcon.addEventListener('click', ()=>{
-      console.log('clockIcon is clicked.');
+      change_function_in_use_icon(functionInUseIcon, clockIcon);
+      functionInUse = 'clock';
     });
     timerIcon.addEventListener('click', ()=>{
-      console.log('timerIcon is clicked.');
+      change_function_in_use_icon(functionInUseIcon, timerIcon);
+      functionInUse = 'timer';
     });
     stopwatchIcon.addEventListener('click', ()=>{
-      console.log('stopwatchIcon is clicked.');
+      change_function_in_use_icon(functionInUseIcon, stopwatchIcon);
+      functionInUse = 'stopWatch';
     });
+
+    function change_function_in_use_icon(previous_active_function_icon, new_active_function_icon){
+      previous_active_function_icon.classList.remove('function-in-use-icon');
+      new_active_function_icon.classList.add('function-in-use-icon');
+
+      functionInUseIcon = new_active_function_icon;
+    }
   </script>
 </html>
