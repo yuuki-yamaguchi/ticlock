@@ -28,6 +28,7 @@
 
   <script>
     let clockIcon = document.getElementById('clock-icon');
+    let clockTime = document.getElementById('clock-time');
     let timerIcon = document.getElementById('timer-icon');
     let stopwatchIcon = document.getElementById('stopwatch-icon');
     let functionInUseText = document.getElementById('function-in-use');
@@ -56,6 +57,9 @@
         functionInUse = 'Stop Watch';
         functionInUseText.innerText = functionInUse;
       });      
+
+      set_time();
+      setInterval(set_time, 1000);
     }
 
     function change_function_in_use_icon(previous_active_function_icon, new_active_function_icon){
@@ -64,5 +68,13 @@
 
       functionInUseIcon = new_active_function_icon;
     }
-  </script>
+
+    function set_time(){
+      let nowTime = new Date();
+      let timeText = prefix_0_if_single_digit(nowTime.getHours()) + ':' + prefix_0_if_single_digit(nowTime.getMinutes()) + ':' + prefix_0_if_single_digit(nowTime.getSeconds());
+      clockTime.innerText = timeText;
+    }
+
+    function prefix_0_if_single_digit(numeral){return numeral>10 ? String(numeral) : '0'+numeral ;}
+    </script>
 </html>
